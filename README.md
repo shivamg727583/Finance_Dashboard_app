@@ -6,7 +6,7 @@ This project demonstrates frontend engineering skills including UI design, state
 ---
 
 ## 🚀 Live Demo
-👉 https://your-app-link.vercel.app
+👉 https://financedashboard-app.netlify.app/
 
 ---
 
@@ -82,24 +82,26 @@ Role switching is implemented using a dropdown (frontend simulation).
 ---
 
 ## 📂 Project Structure
+
+```bash
 src/
 │
 ├── components/
-│ ├── Sidebar.jsx
-│ ├── Topbar.jsx
-│ ├── SummaryCards.jsx
-│ ├── Charts.jsx
-│ ├── Transactions.jsx
-│ ├── Insights.jsx
-│ ├── Modal.jsx
+│   ├── Sidebar.jsx
+│   ├── Topbar.jsx
+│   ├── SummaryCards.jsx
+│   ├── Charts.jsx
+│   ├── Transactions.jsx
+│   ├── Insights.jsx
+│   ├── Modal.jsx
 │
 ├── utils/
-│ ├── utils.js
+│   ├── utils.js
 │
 ├── App.jsx
 ├── main.jsx
 └── index.css
-
+```
 
 ---
 
@@ -107,7 +109,7 @@ src/
 
 ### 1. Clone the repository
 
-git clone https://github.com/shivamg727583/finance-dashboard.git
+git clone https://github.com/shivamg727583/Finance_Dashboard_app
 
 cd finance-dashboard
 

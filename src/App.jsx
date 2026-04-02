@@ -7,6 +7,7 @@ import Charts from "./components/Charts";
 import Transactions from "./components/Transaction";
 import Insights from "./components/Insights";
 import Modal from "./components/Modal";
+import SplashScreen from "./components/SplashScreen";
 
 const seed = [
   { id: 1, date: "2026-01-12", amount: 2500, category: "Food", type: "expense" },
@@ -33,6 +34,18 @@ export default function App() {
   const [sort, setSort] = useState("date"); 
   const [dark, setDark] = useState(false);
   const [editing, setEditing] = useState(null);
+  const [initialLoading, setInitialLoading] = useState(true);
+
+
+  useEffect(() => {
+  const timer = setTimeout(() => {
+    setInitialLoading(false);
+  }, 1200); // 1.2 sec perfect
+
+  return () => clearTimeout(timer);
+}, []);
+
+
 
   useEffect(() => {
     localStorage.setItem("txns", JSON.stringify(transactions));
@@ -107,6 +120,11 @@ export default function App() {
     }
     setEditing(null);
   };
+
+
+  if (initialLoading) {
+  return <SplashScreen />;
+}
 
   return (
     <div className="flex min-h-screen bg-gray-100 dark:bg-gray-900 text-black dark:text-white transition-colors">
