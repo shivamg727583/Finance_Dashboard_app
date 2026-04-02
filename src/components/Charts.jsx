@@ -18,7 +18,7 @@ const Charts = ({ monthly = [], categories = [] }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-6">
 
-      {/* 📈 Line Chart */}
+     
       <div className="bg-white dark:bg-gray-800 rounded-2xl shadow p-5 hover:shadow-lg transition">
         
         <h3 className="text-sm text-gray-500 dark:text-gray-400 mb-3">
@@ -28,7 +28,7 @@ const Charts = ({ monthly = [], categories = [] }) => {
         <ResponsiveContainer width="100%" height={260}>
           <LineChart data={monthly}>
 
-            {/* Gradient */}
+           
             <defs>
               <linearGradient id="colorBalance" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="5%" stopColor="#6366F1" stopOpacity={0.4}/>
@@ -70,7 +70,7 @@ const Charts = ({ monthly = [], categories = [] }) => {
         </ResponsiveContainer>
       </div>
 
-      {/* 🥧 Pie Chart */}
+   
       <div className="bg-white dark:bg-gray-800 rounded-2xl shadow p-5 hover:shadow-lg transition">
 
         <h3 className="text-sm text-gray-500 dark:text-gray-400 mb-3">
@@ -85,7 +85,7 @@ const Charts = ({ monthly = [], categories = [] }) => {
               dataKey="value"
               nameKey="name"
               outerRadius={90}
-              innerRadius={50}   // 🔥 donut style
+              innerRadius={50}   
               paddingAngle={3}
               animationDuration={800}
             >

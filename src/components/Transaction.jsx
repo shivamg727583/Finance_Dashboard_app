@@ -18,7 +18,7 @@ const Transactions = ({
 
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-5">
         
-        {/* 🔍 Search */}
+    
         <div className="relative w-full md:w-1/3">
           <Search size={16} className="absolute left-3 top-2.5 text-gray-400" />
           <input
@@ -32,7 +32,7 @@ const Transactions = ({
       
         <div className="flex gap-2 items-center flex-wrap">
 
-          {/* Filter */}
+         
           <select
             value={filter}
             onChange={(e) => setFilter(e.target.value)}
@@ -43,7 +43,7 @@ const Transactions = ({
             <option value="expense" className="dark:bg-gray-800 dark:text-gray-300">Expense</option>
           </select>
 
-          {/* ✅ NEW SORT (UI MATCHED) */}
+        
           <select
             value={sort}
             onChange={(e) => setSort(e.target.value)}
@@ -70,18 +70,17 @@ const Transactions = ({
         </div>
       </div>
 
-      {/* 📭 Empty State */}
+     
       {data.length === 0 ? (
         <div className="text-center py-10 text-gray-400">
           <p>No transactions found</p>
         </div>
       ) : (
 
-        /* 📊 Table */
+     
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
-            
-            {/* Header */}
+           
             <thead>
               <tr className="text-left text-gray-500 dark:text-gray-400 border-b border-gray-200 dark:border-gray-700">
                 <th className="py-2">Date</th>
@@ -92,7 +91,6 @@ const Transactions = ({
               </tr>
             </thead>
 
-            {/* Body */}
             <tbody>
               {data.map((t) => (
                 <tr
